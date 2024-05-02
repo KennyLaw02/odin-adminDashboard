@@ -1,0 +1,268 @@
+:root {
+    --navBar-bg-color: whitesmoke;
+    --dark-bg-color: #141619;
+    --gray-bg-color: #2c2e3a;
+    --indigo-bg-color: #050a44;
+    --blue-bg-color: #0a21c0;
+    --smoke-bg-color: #e2e8f0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    min-height: 100vh;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 185px 3fr;
+    grid-template-columns: 275px 4fr 1.4fr;
+}
+
+#headerbar {
+    grid-row: 1 / 1;
+    grid-column: 2 / -1;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+
+    padding-bottom: 12px;
+}
+
+
+#header-top {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+
+#header-left,
+#header-right {
+    width: max(100px, 60%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#header-right {
+    width: max(100px, 20%);
+    justify-content: right;
+    gap: 24px;
+}
+
+.leftContainer {
+    display: flex;
+    align-items: flex-start;
+    width: max(300px, 20%);
+}
+
+.pfp {
+    height: 60px;
+    min-width: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-right: 12px;
+}
+
+#header-right .pfp {
+    height: 40px;
+    min-width: 40px;
+    margin: 0;
+}
+
+#user-list li .pfp {
+    min-width: 50px;
+}
+
+#header-bottom p {
+    margin: 0;
+}
+
+
+#searchBar {
+    /* appearance: none; */
+    width: max(100px, 90%);
+    background-color: var(--smoke-bg-color);
+    outline: none;
+    border: 2px solid var(--smoke-bg-color);
+    border-radius: 16px;
+    padding: 4px 8px;
+}
+
+#header-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+
+#header-bottom .rightContainer {
+    display: flex;
+    gap: 20px;
+}
+
+#header-bottom p {
+    margin-bottom: -16px;
+}
+
+button {
+    color: whitesmoke;
+    background-color: var(--indigo-bg-color);
+    outline: none;
+    border: 2px solid var(--indigo-bg-color);
+    border-radius: 16px;
+    padding: 6px 24px;
+}
+
+#dashboard-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#sidebar {
+    color: whitesmoke;
+    background-color: var(--indigo-bg-color);
+    grid-row: 1 / span 3;
+    grid-column: 1 / 1;
+    padding: 0 20px;
+}
+
+#sidebar ul {
+    margin: 64px 0;
+    padding: 0;
+}
+
+#sidebar li {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+li img,
+#dashboard-container img {
+    filter: invert(100%);
+}
+
+img.pfp {
+    filter: invert(0);
+}
+
+#projects {
+    background-color: var(--smoke-bg-color);
+    grid-row: 2 / 4;
+    padding: 24px;
+}
+
+#projects-container {
+    background-color: var(--smoke-bg-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+div .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: whitesmoke;
+    margin: 8px;
+    padding: 12px;
+    border: 2px solid whitesmoke;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    border-left: 8px solid var(--dark-bg-color);
+}
+
+.projBtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    gap: 12px;
+    padding: 0 12px;
+}
+
+img {
+    height: 30px;
+    width: 30px;
+}
+
+#right-side {
+    background-color: var(--smoke-bg-color);
+
+}
+
+#right-side p {
+    margin: 2px 0 16px 0;
+}
+
+#trending ul {
+    background-color: whitesmoke;
+}
+
+#announcements,
+#trending {
+    padding: 0 24px;
+}
+
+#announcements-body {
+    padding: 0 24px;
+
+    border: 2px solid whitesmoke;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+
+    background-color: whitesmoke;
+}
+
+#announcements section h2,
+#trending h2 {
+    font-size: 1.2rem;
+}
+
+.line-separator {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 2px;
+}
+
+#trending ul {
+    padding: 12px 24px;
+    margin: 0;
+
+    border: 2px solid whitesmoke;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+div h2 {
+    margin-bottom: 4px;
+}
+
+.project h2 {
+    margin: 4px 0;
+}
+
+#user-list li {
+    display: flex;
+    align-items: center;
+}
+
+#user-list img {
+    height: 50px;
+    width: 50px;
+}
