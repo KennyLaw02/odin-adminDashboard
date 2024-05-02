@@ -19,7 +19,7 @@ body {
     height: 100%;
 
     display: grid;
-    grid-template-rows: 185px 3fr;
+    grid-template-rows: 200px 3fr;
     grid-template-columns: 275px 4fr 1.4fr;
 }
 
@@ -61,7 +61,8 @@ body {
 .leftContainer {
     display: flex;
     align-items: flex-start;
-    width: max(300px, 20%);
+    width: max(300px, 40%);
+    min-width: 275px;
 }
 
 .pfp {
@@ -86,6 +87,9 @@ body {
     margin: 0;
 }
 
+#header-bottom {
+    min-height: 125px;
+}
 
 #searchBar {
     /* appearance: none; */
